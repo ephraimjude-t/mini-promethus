@@ -19,6 +19,7 @@ metrics_store = []
 
 def get_db_conn():
     conn = sqlite3.connect(DB_NAME)
+    conn.execute("PRAGMA journal_mode=WAL;")
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -79,6 +80,15 @@ async def list_hosts():
     hosts = cursor.fetchall()
     conn.close()
     return [dict(h) for h in hosts]
+
+@app.get("/logs/{hostname}")
+async def list_logs(hostname: str):
+    conn = get_db_conn()
+    cursor = conn.cursor()
+    cursor.execute("SELECT time, message FROM logs WHERE host = ?", (hostname,))
+    logs = cursor.fetchall()
+    conn.close()
+    return [dict(l) for l in logs]
 
     
     
