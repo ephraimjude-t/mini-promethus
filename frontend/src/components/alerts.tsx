@@ -51,7 +51,7 @@ function Notify(){
     },[stats])
 
     return (
-        <div className="p-6 bg-gray-900 min-h-screen text-white">
+        <div className="bg-gray-900 text-white">
             <ToastContainer limit={4} newestOnTop stacked />
         </div>
 );

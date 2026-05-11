@@ -1,6 +1,6 @@
 import Monitoring from "./components/monitoring";
 import Chart from "./components/charts";
-import Alerts from "./components/alerts";
+import Notify from "./components/alerts.tsx";
 import HostSelector from "./components/selector";
 import Logs_dashboard from './components/logs.tsx'
 
@@ -8,22 +8,20 @@ function App(){
 
   return(
     <>
-      <div className="bg-[#0F172A] w-full min-h-screen flex flex-col ">
+      <Notify />
+      <div className="bg-[#0A0A0A] w-full min-h-screen flex flex-col items-center ">
         <div>
           <HostSelector />
         </div>
-        <div className="flex flex-row ">
+        <div className="flex flex-col items-center justify-center ">
           <div>
             <Monitoring />
           </div>
           <div>
-            <Alerts />
-          </div>
-          <div className="py-20">
             <Chart />
           </div>
         </div>
-        <div className="p-10">
+        <div className="p-20">
           <Logs_dashboard />
         </div>
       </div>

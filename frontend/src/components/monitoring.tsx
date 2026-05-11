@@ -38,8 +38,8 @@ function Monitoring(){
 
     return(
         <>
-            <div className="p-20 w-[clamp(300px,50vw,600px)]">
-                <div className="flex flex-col bg-[#1E293B] p-10 rounded-xl">
+            <div className="p-20">
+                <div className="flex flex-row gap-10 bg-[#121212] border border-[#1F1F1F] p-10 rounded-xl ">
                     <div className="flex flex-row gap-10 justify-center text-[#F8FAFC]">
                             <div className="h-40 w-40 ">
                                 <CircularProgressbarWithChildren
@@ -48,12 +48,12 @@ function Monitoring(){
                                     styles={buildStyles({
                                         rotation: 0.75,
                                         strokeLinecap: 'round',
-                                        pathColor: cpu > 90 ? '#EF4444' : cpu > 70 ? '#F59E0B' : '#2DD4BF',
+                                        pathColor: cpu > 90 ? '#EF4444' : cpu > 70 ? '#F59E0B' : '#10B981',
                                         trailColor: '#e5e7eb',
                                     })}
                                 >
                                     <div className="mt-[-40px] text-xl font-bold">{cpu}%</div>
-                                    <p>
+                                    <p className="opacity-50">
                                         cpu
                                     </p>
 
@@ -66,12 +66,12 @@ function Monitoring(){
                                     styles={buildStyles({
                                         rotation: 0.75,
                                         strokeLinecap: 'round',
-                                        pathColor: memory > 90 ? '#EF4444' : memory > 70 ? '#F59E0B' : '#2DD4BF',
+                                        pathColor: memory > 90 ? '#EF4444' : memory > 70 ? '#F59E0B' : '#10B981',
                                         trailColor: '#e5e7eb',
                                     })}
                                 >
                                     <div className="mt-[-40px] text-xl font-bold">{memory}%</div>
-                                    <p>
+                                    <p className="opacity-50">
                                         memory
                                     </p>
 
@@ -87,12 +87,12 @@ function Monitoring(){
                                 styles={buildStyles({
                                     rotation: 0.75,
                                     strokeLinecap: 'round',
-                                    pathColor: disk > 90 ? '#EF4444' : disk > 70 ? '#F59E0B' : '#2DD4BF',
+                                    pathColor: disk > 90 ? '#EF4444' : disk > 70 ? '#F59E0B' : '#10B981',
                                     trailColor: '#e5e7eb',
                                 })}
                             >
                                 <div className="mt-[-40px] text-xl font-bold">{disk}%</div>
-                                <p>
+                                <p className="opacity-50">
                                     disk
                                 </p>
 
@@ -105,14 +105,14 @@ function Monitoring(){
                                 styles={buildStyles({
                                     rotation: 0.75,
                                     strokeLinecap: 'round',
-                                    pathColor: load > 90 ? '#EF4444' : load > 70 ? '#F59E0B' : '#2DD4BF',
+                                    pathColor: load > 90 ? '#EF4444' : load > 70 ? '#F59E0B' : '#10B981',
                                     trailColor: '#e5e7eb',
                                 })}
                             >
                                 <div className="mt-[-40px] text-xl font-bold">
                                     <NumericFormat value={load} displayType={'text'} suffix="%" thousandSeparator={true} decimalScale={2} fixedDecimalScale={true} />
                                 </div>
-                                <p>
+                                <p className="opacity-50">
                                     load
                                 </p>
 

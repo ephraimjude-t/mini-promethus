@@ -24,7 +24,7 @@ function HostSelector() {
     );
 
     return (
-        <div className="flex flex-row gap-10 p-5 justify-center bg-[#0f172a] ">
+        <div className="flex flex-row gap-10 p-5 justify-centers">
             <div className="text-white">
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-64">
@@ -34,7 +34,7 @@ function HostSelector() {
                         <select
                             value={selectedHost}
                             onChange={(e) => setHost(e.target.value)} // Updates Zustand
-                            className="w-full px-4 py-2 border border-gray-600 bg-[#1e293b] rounded-md text-white outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-[#4b5563] bg-[#121212] rounded-md text-white outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="" disabled>-- Choose a host --</option>
                             {Data.map((item, index) => (
@@ -58,11 +58,11 @@ function HostSelector() {
                             placeholder="Type to find..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full px-4 py-2 bg-[#1e293b] border border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-white"
+                            className="w-full px-4 py-2 bg-[#121212] border border-[#4b5563] rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-white"
                         />
 
                         {searchTerm.length > 0 && (
-                            <div className="absolute z-10 w-full mt-1 bg-[#1e293b] border border-gray-600 rounded-md shadow-2xl max-h-60 overflow-y-auto">
+                            <div className="absolute z-10 w-full mt-1 bg-[#121212] border border-[#4b5563] rounded-md shadow-2xl max-h-60 overflow-y-auto">
                                 {filteredHosts.length > 0 ? (
                                     filteredHosts.map((item, index) => (
                                         <div 

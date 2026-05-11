@@ -28,8 +28,8 @@ function Logs_dashboard(){
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                     <span className="text-xs text-gray-500 ml-2 font-mono">stack.sh</span>
                 </div>
-                <div className="p-6 font-mono text-green-400">
-                    <p><span className="text-blue-400">➜</span> <span className="text-white">LOGS:
+                <div className="p-6 font-mono text-green-400 h-64 overflow-y-auto">
+                    <div><span className="text-blue-400">➜</span> <span className="text-white">LOGS:
                     </span>
                         {loading ? (
                             <span>Loading logs...</span>
@@ -43,7 +43,7 @@ function Logs_dashboard(){
                                 ))}
                             </ul>
                         )}
-                    </p>
+                    </div>
                 </div>
             </div>
 

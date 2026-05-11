@@ -95,7 +95,7 @@ function Chart() {
     };
 
     return (
-        <div className=" relative w-[clamp(300px,50vw,800px)] h-[clamp(300px,65vh,800px)] bg-[#1E293B] p-4 rounded-lg left-[-5%] ">
+        <div className="bg-[#121212] border border-[#1F1F1F] overflow-hidden p-4 rounded-lg w-[850px] h-[400px]">
             <Line data={chartConfig} options={options} />
         </div>
     );
