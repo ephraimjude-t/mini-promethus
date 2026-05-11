@@ -1,3 +1,6 @@
 /frontend/node_modules
 /backend/venv
 /backend/__pycache__
+/backend/metrics.db
+/backend/metrics.db-shm
+/backend/metrics.db-wal
